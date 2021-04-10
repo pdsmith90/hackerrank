@@ -7,7 +7,7 @@ import sys
 # Complete the maximumDraws function below.
 #
 def maximumDraws(n):
-    #
+    return n+1
     # Write your code here.
     #
 
