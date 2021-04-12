@@ -6,7 +6,7 @@ read C
 
 if [ "$A" = "$B" ] && [ "$A" = "$C" ]; then
     echo "EQUILATERAL"
-elif [ "$A" = "$B" ] || [ "$A" = "$C" ]; then
+elif [ "$A" = "$B" ] || [ "$A" = "$C" ] || [ "$B" = "$C" ]; then
     echo "ISOSCELES"
 else
     echo "SCALENE"
