@@ -1,0 +1,5 @@
+#!/bin/bash
+
+read exprString
+
+printf "%.3f" $(bc <<< "scale=4; ${exprString}")
