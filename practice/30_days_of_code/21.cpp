@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -12,17 +13,32 @@ using namespace std;
 // Write your code here
 template <typename t>
 void printArray (vector<t> v_) {
-    for (auto &element : v_) {
-        cout << element << endl;
+    for (t i : v_) {
+        cout << i << endl;
     }
 }
 
 int main() {
-  
-    vector<int> vInt{1, 2, 3};
-    vector<string> vString{"Hello", "World"};
-    
-    printArray<int>(vInt);
-    printArray<string>(vString);
-    
-    return 0;
+	int n;
+	
+	cin >> n;
+	vector<int> int_vector(n);
+	for (int i = 0; i < n; i++) {
+		int value;
+		cin >> value;
+		int_vector[i] = value;
+	}
+	
+	cin >> n;
+	vector<string> string_vector(n);
+	for (int i = 0; i < n; i++) {
+		string value;
+		cin >> value;
+		string_vector[i] = value;
+	}
+
+	printArray<int>(int_vector);
+	printArray<string>(string_vector);
+
+	return 0;
+}
